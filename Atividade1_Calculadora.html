@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+
+    <title>Calculadora Programação Web</title>
+    
+    <script type="text/javascript">
+      function calcula() {
+        var num1 = document.getElementById("num1").value;
+        var num2 = document.getElementById("num2").value;
+        //trocar o operador logico com a de sua preferencia
+        var resultado = parseInt(num1) + parseInt(num2);
+        var calc=document.getElementById("resultado");
+        calc.innerHTML=resultado;
+        calc.style.display="inline";
+        alert(resultado);
+      }
+    </script>
+    <style type="text/css">
+    body{
+        font:bold 12px "Trebuchet Ms", Arial;
+    }
+      input [type="text"] {
+        width: 50px;
+        height: 40px;
+        border: thin solid #ccc;
+        float: left;
+        display: inline;
+      }
+      input [type="submit"]{
+          border: none;
+          font:bold 12px "Trebuchet Ms", Arial;
+          width: 50px;
+          height:40px;
+          cursor:pointer;
+          color:#fff;
+          background: #666;
+          float: left;
+          display: inline;
+        }
+        #resultado{
+            background:red;
+            color:#fff;
+            display:none;
+            width: 50px;
+            height: 40px;
+            display: none;
+            margin:40px;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+        }
+        span{
+            margin-left: 10px;
+            float:left;
+            display: inline;
+            height: 40px;
+            line-height: 40px;
+       }
+    </style>
+  </head>
+  <body>
+    <!--Para trocar o operador lógico basta mudar no span-->
+      <input type="text" id="num1" />
+      <span>+</span>
+      <input type="text" id="num2" />
+      <input type="submit" onclick="calcula()" value="Calcular" />
+      <div id="resultado"></div>
+      <span>=</span>
+
+    
+  </body>
+</html>
